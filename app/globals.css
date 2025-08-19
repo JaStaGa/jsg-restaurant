@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --burgundy: #6b1f2b;
+  --cream: #fff3e6;
+  --charcoal: #1e1e1e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base */
+html,
+body {
+  height: 100%
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--charcoal)
+}
+
+/************
+  Utilities bridging Tailwind + design tokens (v4 allows arbitrary values)
+*************/
+.bg-burgundy {
+  background: var(--burgundy)
+}
+
+.text-burgundy {
+  color: var(--burgundy)
+}
+
+.border-burgundy {
+  border-color: var(--burgundy)
+}
+
+.bg-cream {
+  background: var(--cream)
+}
+
+.text-cream {
+  color: var(--cream)
+}
+
+.bg-charcoal {
+  background: var(--charcoal)
+}
+
+.text-charcoal {
+  color: var(--charcoal)
+}
+
+/************
+  Specials ticker (pure CSS marquee)
+*************/
+.ticker {
+  --speed: 40s
+}
+
+.ticker__track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: ticker var(--speed) linear infinite
 }

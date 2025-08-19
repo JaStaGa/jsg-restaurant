@@ -1,0 +1,60 @@
+[
+    {
+        "id": "starters",
+        "title": "Starters",
+        "items": [
+            {
+                "id": "soup",
+                "name": "Roasted Tomato Soup",
+                "price": 9,
+                "flags": {
+                    "vegetarian": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "salad",
+                "name": "Market Greens",
+                "price": 12,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "mains",
+        "title": "Mains",
+        "items": [
+            {
+                "id": "steak",
+                "name": "Hanger Steak + Fries",
+                "price": 28
+            },
+            {
+                "id": "risotto",
+                "name": "Wild Mushroom Risotto",
+                "price": 24,
+                "flags": {
+                    "vegetarian": true,
+                    "glutenFree": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "desserts",
+        "title": "Desserts",
+        "items": [
+            {
+                "id": "panna",
+                "name": "Vanilla Bean Panna Cotta",
+                "price": 10,
+                "flags": {
+                    "glutenFree": true
+                }
+            }
+        ]
+    }
+]
