@@ -61,3 +61,18 @@ body {
   width: max-content;
   animation: ticker var(--speed) linear infinite
 }
+
+.ticker__track:hover {
+  animation-play-state: paused
+}
+
+@media (max-width: 640px) {
+  .ticker {
+    --speed: 60s
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 2px
+}

@@ -4,21 +4,64 @@
         "title": "Starters",
         "items": [
             {
+                "id": "olives",
+                "name": "Warm Marinated Olives",
+                "description": "Citrus peel, chili, rosemary.",
+                "price": 7,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            },
+            {
                 "id": "soup",
                 "name": "Roasted Tomato Soup",
+                "description": "San Marzano, basil oil, grilled sourdough.",
                 "price": 9,
+                "flags": {
+                    "vegetarian": true
+                }
+            },
+            {
+                "id": "greens",
+                "name": "Market Greens",
+                "description": "Herbs, radish, champagne vinaigrette.",
+                "price": 12,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "burrata",
+                "name": "Burrata & Roasted Grapes",
+                "description": "Warm grapes, olive oil, toasted almonds.",
+                "price": 14,
                 "flags": {
                     "vegetarian": true,
                     "glutenFree": true
                 }
             },
             {
-                "id": "salad",
-                "name": "Market Greens",
+                "id": "calamari",
+                "name": "Crispy Calamari",
+                "description": "Lemon aioli, parsley.",
+                "price": 15
+            },
+            {
+                "id": "tartare",
+                "name": "Steak Tartare",
+                "description": "Shallot, caper, dijon, potato crisps.",
+                "price": 17
+            },
+            {
+                "id": "brussels",
+                "name": "Charred Brussels",
+                "description": "Chili honey, sesame, lime.",
                 "price": 12,
                 "flags": {
-                    "vegan": true,
-                    "glutenFree": true
+                    "vegetarian": true,
+                    "spicy": true
                 }
             }
         ]
@@ -30,15 +73,118 @@
             {
                 "id": "steak",
                 "name": "Hanger Steak + Fries",
+                "description": "Garlic butter, watercress, house fries.",
                 "price": 28
             },
             {
                 "id": "risotto",
                 "name": "Wild Mushroom Risotto",
+                "description": "Parmigiano, thyme, truffle oil.",
                 "price": 24,
                 "flags": {
                     "vegetarian": true,
                     "glutenFree": true
+                }
+            },
+            {
+                "id": "salmon",
+                "name": "Crispy-Skin Salmon",
+                "description": "Lentils, fennel, lemon butter.",
+                "price": 28,
+                "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "chicken",
+                "name": "Roast Chicken",
+                "description": "Pan jus, potato purée, greens.",
+                "price": 26,
+                "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "gnocchi",
+                "name": "Potato Gnocchi",
+                "description": "Basil pesto, peas, pecorino.",
+                "price": 22,
+                "flags": {
+                    "vegetarian": true
+                }
+            },
+            {
+                "id": "shortrib",
+                "name": "Braised Short Rib",
+                "description": "Red wine reduction, polenta.",
+                "price": 32,
+                "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "scallops",
+                "name": "Seared Scallops",
+                "description": "Cauliflower, brown butter, capers.",
+                "price": 31,
+                "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "tagine",
+                "name": "Vegetable Tagine",
+                "description": "Chickpeas, apricot, preserved lemon.",
+                "price": 20,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "sides",
+        "title": "Sides",
+        "items": [
+            {
+                "id": "fries",
+                "name": "Hand-Cut Fries",
+                "description": "Smoked paprika, aioli.",
+                "price": 7,
+                "flags": {
+                    "vegan": true
+                }
+            },
+            {
+                "id": "asparagus",
+                "name": "Grilled Asparagus",
+                "description": "Lemon, olive oil.",
+                "price": 9,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "mash",
+                "name": "Truffle Mash",
+                "description": "Yukon gold, truffle butter.",
+                "price": 8,
+                "flags": {
+                    "vegetarian": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "carrots",
+                "name": "Harissa Carrots",
+                "description": "Mint, sesame.",
+                "price": 8,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true,
+                    "spicy": true
                 }
             }
         ]
@@ -50,8 +196,48 @@
             {
                 "id": "panna",
                 "name": "Vanilla Bean Panna Cotta",
+                "description": "Mac­erated berries.",
                 "price": 10,
                 "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "torte",
+                "name": "Dark Chocolate Torte",
+                "description": "Sea salt, crème fraîche.",
+                "price": 10,
+                "flags": {
+                    "vegetarian": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "lemon",
+                "name": "Lemon Olive Oil Cake",
+                "description": "Candied citrus.",
+                "price": 9,
+                "flags": {
+                    "vegetarian": true
+                }
+            },
+            {
+                "id": "brulee",
+                "name": "Crème Brûlée",
+                "description": "Vanilla custard, crackled sugar.",
+                "price": 10,
+                "flags": {
+                    "vegetarian": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "sorbet",
+                "name": "Seasonal Sorbet",
+                "description": "Rotating flavors.",
+                "price": 8,
+                "flags": {
+                    "vegan": true,
                     "glutenFree": true
                 }
             }
