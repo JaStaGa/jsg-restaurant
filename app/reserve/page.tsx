@@ -11,19 +11,21 @@ const Schema = z.object({
     time: z.string(),
     partySize: z.coerce.number().int().min(1).max(12),
     notes: z.string().optional(),
-    hp: z.string().optional(), // honeypot
+    hp: z.string().optional(),
 });
 
 export default function Page() {
     const [preview, setPreview] = useState<string | null>(null);
     const [pending, setPending] = useState(false);
+    const [formKey, setFormKey] = useState(0); // ← force remount
 
     async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         if (pending) return;
         setPending(true);
+        const form = e.currentTarget;            // ← keep a stable reference
         try {
-            const fd = new FormData(e.currentTarget);
+            const fd = new FormData(form);
             const obj = Object.fromEntries(fd.entries());
             const parsed = Schema.safeParse(obj);
             if (!parsed.success) { toast.error("Check form fields."); return; }
@@ -38,7 +40,8 @@ export default function Page() {
             if (res.ok) {
                 toast.success("Request sent.");
                 setPreview(json.previewUrl ?? null);
-                (e.currentTarget as HTMLFormElement).reset();   // clear form
+                form.reset();                         // ← use the saved element, not e.currentTarget
+                setFormKey(k => k + 1);
             } else {
                 toast.error(json.error || "Request failed.");
             }
@@ -50,7 +53,7 @@ export default function Page() {
     return (
         <main className="mx-auto max-w-2xl px-6 py-12">
             <h1 className="text-3xl font-serif text-burgundy">Reserve</h1>
-            <form onSubmit={onSubmit} className="mt-6">
+            <form key={formKey} onSubmit={onSubmit} className="mt-6">
                 <fieldset disabled={pending} className="grid gap-4">
                     <input name="name" placeholder="Name" className="border p-3 rounded" required />
                     <input name="email" type="email" placeholder="Email" className="border p-3 rounded" required />
