@@ -1,4 +1,3 @@
-"use client";
 import type { MenuSection, MenuItem } from "@/lib/types";
 
 function matchFlags(item: MenuItem, f: { vegan?: boolean; vegetarian?: boolean; glutenFree?: boolean }) {
@@ -12,11 +11,6 @@ function matchFlags(item: MenuItem, f: { vegan?: boolean; vegetarian?: boolean; 
 export default function MenuList({ sections, filters }: { sections: MenuSection[]; filters: { vegan: boolean; vegetarian: boolean; glutenFree: boolean } }) {
     return (
         <div className="mx-auto max-w-6xl px-6">
-            <nav className="my-6 flex flex-wrap gap-2">
-                {sections.map(s => (
-                    <a key={s.id} href={`#${s.id}`} className="px-3 py-1 rounded-full border hover:bg-charcoal/5">{s.title}</a>
-                ))}
-            </nav>
             <div className="space-y-10">
                 {sections.map(section => (
                     <section id={section.id} key={section.id} className="scroll-mt-24">
@@ -36,7 +30,7 @@ export default function MenuList({ sections, filters }: { sections: MenuSection[
                                             </div>
                                         )}
                                     </div>
-                                    <div className="min-w-[3rem] text-right font-medium">${" "}{item.price.toFixed(0)}</div>
+                                    <div className="min-w-[3rem] text-right font-medium">${item.price.toFixed(0)}</div>
                                 </li>
                             ))}
                         </ul>

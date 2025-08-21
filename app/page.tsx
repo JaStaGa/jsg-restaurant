@@ -4,6 +4,10 @@ import SpecialsTicker from "@/components/SpecialsTicker";
 import StickyActionBar from "@/components/StickyActionBar";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/seo";
+import HomeCTAs from "@/components/HomeCTAs";
+import HomeSpecials from "@/components/HomeSpecials";
+import HomeMenuPreview from "@/components/HomeMenuPreview";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
   title: "Neighborhood Bistro · Book a Table",
@@ -11,26 +15,16 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    name: "JSG Restaurant",
-    url: site.url,
-    servesCuisine: ["American", "Seasonal"],
-    address: { "@type": "PostalAddress", addressLocality: "Boston", addressRegion: "MA", postalCode: "02118" },
-    openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "11:30", closes: "21:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Friday", "Saturday"], opens: "11:30", closes: "22:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Sunday"], opens: "11:00", closes: "20:00" }
-    ],
-  };
-
+  const jsonLd = { "@context": "https://schema.org", "@type": "Restaurant", name: "JSG Restaurant", url: site.url };
   return (
     <main>
       <SpecialsTicker />
       <Hero />
+      <HomeCTAs />
+      <HomeSpecials />
+      <HomeMenuPreview />
+      <TestimonialCarousel />
       <StickyActionBar />
-      {/* Sections for Today’s Specials preview, Testimonials, CTA blocks can go here */}
       <JsonLd json={jsonLd} />
     </main>
   );
