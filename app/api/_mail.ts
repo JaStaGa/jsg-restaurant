@@ -1,8 +1,4 @@
-import nodemailer, {
-    type Transporter,
-    type SentMessageInfo,
-    type TestAccount,
-} from "nodemailer";
+import nodemailer, { type Transporter, type SentMessageInfo, type TestAccount } from "nodemailer";
 
 let transporter: Transporter | null = null;
 
@@ -13,7 +9,7 @@ export async function getTransporter(): Promise<Transporter> {
         host: acc.smtp.host,
         port: acc.smtp.port,
         secure: acc.smtp.secure,
-        auth: { user: acc.user, pass: acc.pass },
+        auth: { user: acc.user, pass: acc.pass }
     });
     return transporter;
 }

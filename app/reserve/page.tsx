@@ -10,7 +10,8 @@ const Schema = z.object({
     date: z.string(),
     time: z.string(),
     partySize: z.coerce.number().int().min(1).max(12),
-    notes: z.string().optional()
+    notes: z.string().optional(),
+    hp: z.string().optional() // honeypot
 });
 
 export default function Page() {
@@ -19,9 +20,10 @@ export default function Page() {
     async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const fd = new FormData(e.currentTarget);
-        const data = Object.fromEntries(fd.entries());
-        const parsed = Schema.safeParse(data);
+        const obj = Object.fromEntries(fd.entries());
+        const parsed = Schema.safeParse(obj);
         if (!parsed.success) { toast.error("Check form fields."); return; }
+        if (parsed.data.hp) { toast.error("Spam detected."); return; }
 
         const res = await fetch("/api/reserve", {
             method: "POST",
@@ -46,6 +48,7 @@ export default function Page() {
                 </div>
                 <input name="partySize" type="number" min={1} max={12} placeholder="Party size" className="border p-3 rounded" required />
                 <textarea name="notes" placeholder="Notes (optional)" className="border p-3 rounded min-h-28" />
+                <input name="hp" className="hidden" tabIndex={-1} aria-hidden="true" />
                 <button className="px-5 py-3 rounded-md bg-burgundy text-cream">Submit</button>
             </form>
             {preview && (
