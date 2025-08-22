@@ -1,0 +1,62 @@
+[
+    {
+        "src": "/images/gallery/1.png",
+        "itemId": "soup",
+        "alt": "Roasted tomato soup with grilled sourdough"
+    },
+    {
+        "src": "/images/gallery/2.png",
+        "itemId": "greens",
+        "alt": "Market greens salad with herbs"
+    },
+    {
+        "src": "/images/gallery/3.png",
+        "itemId": "burrata",
+        "alt": "Burrata with warm roasted grapes"
+    },
+    {
+        "src": "/images/gallery/4.png",
+        "itemId": "calamari",
+        "alt": "Crispy calamari with lemon aioli"
+    },
+    {
+        "src": "/images/gallery/5.png",
+        "itemId": "steak",
+        "alt": "Hanger steak with fries"
+    },
+    {
+        "src": "/images/gallery/6.png",
+        "itemId": "risotto",
+        "alt": "Wild mushroom risotto"
+    },
+    {
+        "src": "/images/gallery/7.png",
+        "itemId": "salmon",
+        "alt": "Crispy-skin salmon over lentils"
+    },
+    {
+        "src": "/images/gallery/8.png",
+        "itemId": "chicken",
+        "alt": "Roast chicken with greens"
+    },
+    {
+        "src": "/images/gallery/9.png",
+        "itemId": "shortrib",
+        "alt": "Braised short rib"
+    },
+    {
+        "src": "/images/gallery/10.png",
+        "itemId": "scallops",
+        "alt": "Seared scallops"
+    },
+    {
+        "src": "/images/gallery/11.png",
+        "itemId": "torte",
+        "alt": "Dark chocolate torte"
+    },
+    {
+        "src": "/images/gallery/12.png",
+        "kind": "room",
+        "alt": "Dining room with burgundy chairs"
+    }
+]

@@ -58,7 +58,9 @@ export default function ReserveForm() {
                     <input name="email" type="email" placeholder="Email" className="border p-3 rounded" required />
                     <input name="phone" placeholder="Phone" className="border p-3 rounded" required />
                     <div className="grid grid-cols-2 gap-4">
+                        <p>Date:</p>
                         <input name="date" type="date" placeholder="Date" className="border p-3 rounded" required />
+                        <p>Time:</p>
                         <input name="time" type="time" placeholder="Time" className="border p-3 rounded" required />
                     </div>
                     <input name="partySize" type="number" min={1} max={12} placeholder="Party size" className="border p-3 rounded" required />
