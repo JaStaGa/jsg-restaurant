@@ -1,0 +1,26 @@
+[
+    {
+        "q": "Do you take walk-ins?",
+        "a": "Yes. We keep bar seats and a few tables for walk-ins."
+    },
+    {
+        "q": "How do I reserve?",
+        "a": "Use the Reserve page or call us during open hours."
+    },
+    {
+        "q": "Is there parking?",
+        "a": "Metered street parking on Washington St. Free after 8pm."
+    },
+    {
+        "q": "Can you handle allergens?",
+        "a": "Tell us when you book. We label common allergens and can accommodate most requests."
+    },
+    {
+        "q": "Do you offer takeout?",
+        "a": "Yes, call to place an order. Limited menu during peak hours."
+    },
+    {
+        "q": "Large parties or events?",
+        "a": "Parties of 8+ should call. We can arrange a set menu with advance notice."
+    }
+]

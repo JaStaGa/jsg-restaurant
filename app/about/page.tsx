@@ -4,11 +4,15 @@ import HoursTable from "@/components/HoursTable";
 import MapEmbed from "@/components/MapEmbed";
 import locationData from "@/data/location.json";
 import hoursData from "@/data/hours.json";
+import { site } from "@/lib/seo";
 
 type Location = { lat: number; lng: number; address: string };
 type HoursRow = { day: string; opens: string; closes: string };
 
-export const metadata: Metadata = { title: "About · Hours & Location" };
+export const metadata: Metadata = {
+  title: "About · Hours & Location",
+  alternates: { canonical: `${site.url}/about` },
+};
 
 export default function Page() {
     const location = locationData as Location;

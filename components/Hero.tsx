@@ -47,7 +47,7 @@ export default function Hero() {
                         Book a Table
                     </Link>
                     <a
-                        href="tel:+17185550123"
+                        href="tel:+19175245650"
                         className="px-5 py-3 rounded-md border border-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
                     >
                         Call

@@ -196,7 +196,7 @@
             {
                 "id": "panna",
                 "name": "Vanilla Bean Panna Cotta",
-                "description": "Mac­erated berries.",
+                "description": "Macerated berries.",
                 "price": 10,
                 "flags": {
                     "glutenFree": true
@@ -236,6 +236,80 @@
                 "name": "Seasonal Sorbet",
                 "description": "Rotating flavors.",
                 "price": 8,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            }
+        ]
+    },
+    {
+        "id": "beverages",
+        "title": "Beverages",
+        "items": [
+            {
+                "id": "spritz",
+                "name": "Citrus Spritz",
+                "description": "Orange, tonic, rosemary.",
+                "price": 7,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "hibiscus",
+                "name": "Hibiscus Cooler",
+                "description": "Tart hibiscus, lime, soda.",
+                "price": 7,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "espresso",
+                "name": "Double Espresso",
+                "description": "House blend.",
+                "price": 4,
+                "flags": {
+                    "vegetarian": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "pn_glass",
+                "name": "Pinot Noir (glass)",
+                "description": "Burgundy, bright cherry.",
+                "price": 13,
+                "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "ch_glass",
+                "name": "Chardonnay (glass)",
+                "description": "Citrus, subtle oak.",
+                "price": 12,
+                "flags": {
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "spark",
+                "name": "Sparkling Water",
+                "description": "750ml bottle.",
+                "price": 6,
+                "flags": {
+                    "vegan": true,
+                    "glutenFree": true
+                }
+            },
+            {
+                "id": "still",
+                "name": "Still Water",
+                "description": "750ml bottle.",
+                "price": 5,
                 "flags": {
                     "vegan": true,
                     "glutenFree": true

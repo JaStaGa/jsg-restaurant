@@ -10,6 +10,7 @@ export default function Header() {
         { href: "/gallery", label: "Gallery" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
+        { href: "/faq", label: "FAQ" },
     ];
     return (
         <header className="bg-cream/90 backdrop-blur border-b sticky top-0 z-40">
@@ -29,6 +30,7 @@ export default function Header() {
                                 {l.label}
                                 {active && <span className="absolute -bottom-3 left-0 right-0 h-0.5 bg-burgundy" />}
                             </Link>
+                            
                         );
                     })}
                 </nav>

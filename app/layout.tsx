@@ -12,7 +12,7 @@ export const metadata: Metadata = baseMetadata;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${serif.variable} ${sans.variable} font-sans antialiased`}>
+      <body className={`${serif.variable} ${sans.variable} font-sans antialiased pb-16 md:pb-0`}>
         <Header />
         {children}
         <Footer />

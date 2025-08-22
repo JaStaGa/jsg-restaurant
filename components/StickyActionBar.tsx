@@ -1,12 +1,18 @@
 import Link from "next/link";
+import loc from "@/data/location.json";
+
+type Location = { lat: number; lng: number; address: string };
+const location = loc as Location;
+const dest = `${location.lat},${location.lng}`;
+const mapHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(dest)}`;
 
 export default function StickyActionBar() {
     return (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden border-t bg-charcoal/95 backdrop-blur text-cream">
             <nav className="mx-auto max-w-6xl grid grid-cols-3 text-center">
-                <a href="tel:+17185550123" className="p-3">Call</a>
+                <a href="tel:+19175245650" className="p-3">Call</a>
                 <Link href="/reserve" className="p-3 bg-burgundy">Reserve</Link>
-                <a href="https://maps.app.goo.gl/" target="_blank" className="p-3">Directions</a>
+                <a href={mapHref} target="_blank" rel="noopener" className="p-3">Directions</a>
             </nav>
         </div>
     );
