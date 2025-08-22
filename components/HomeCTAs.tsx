@@ -8,7 +8,7 @@ const mapHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIC
 
 export default function HomeCTAs() {
     return (
-        <section className="bg-cream">
+        <section className="hidden md:block bg-cream">
             <div className="mx-auto max-w-6xl px-6 py-10 grid gap-4 sm:grid-cols-3">
                 <Link href="/reserve" className="rounded-xl border p-5 shadow-sm transition hover:shadow-md hover:bg-charcoal/5">
                     <h3 className="font-serif text-burgundy text-xl">Reserve</h3>

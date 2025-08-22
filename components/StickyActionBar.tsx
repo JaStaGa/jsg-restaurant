@@ -10,9 +10,9 @@ export default function StickyActionBar() {
     return (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden border-t bg-charcoal/95 backdrop-blur text-cream">
             <nav className="mx-auto max-w-6xl grid grid-cols-3 text-center">
-                <a href="tel:+19175245650" className="p-3">Call</a>
-                <Link href="/reserve" className="p-3 bg-burgundy">Reserve</Link>
-                <a href={mapHref} target="_blank" rel="noopener" className="p-3">Directions</a>
+                <a href="tel:+19175245650" className="p-3 font-medium text-shadow-strong text-stroke">Call</a>
+                <Link href="/reserve" className="p-3 bg-burgundy font-medium text-shadow-strong text-stroke">Reserve</Link>
+                <a href={mapHref} target="_blank" rel="noopener" className="p-3 font-medium text-shadow-strong text-stroke">Directions</a>
             </nav>
         </div>
     );

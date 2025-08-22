@@ -15,8 +15,8 @@ export default function Header() {
     return (
         <header className="bg-cream/90 backdrop-blur border-b sticky top-0 z-40">
             <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
-                <Link href="/" className="font-serif text-burgundy text-lg">JSG Restaurant</Link>
-                <nav aria-label="Primary" className="flex gap-5 text-sm overflow-x-auto">
+                <Link href="/" className="font-serif text-burgundy text-lg  font-bold text-shadow-strong-w text-stroke">JSG Restaurant</Link>
+                <nav aria-label="Primary" className="flex gap-5 text-sm font-bold overflow-x-auto text-shadow-strong-w text-stroke-w">
                     {links.map(l => {
                         const active = p === l.href;
                         return (

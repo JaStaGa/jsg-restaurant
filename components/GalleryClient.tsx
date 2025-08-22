@@ -17,8 +17,13 @@ export default function GalleryClient() {
                             className="block overflow-hidden rounded-lg border focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40"
                             onClick={() => { setSrc(p); setOpen(true); }}
                         >
-                            <Image src={p} alt="Dining room or dish" width={600} height={400}
-                                className="aspect-[3/2] object-cover transition-transform hover:scale-[1.02]" />
+                            <Image
+                                src={p}
+                                alt="Dining room or dish"
+                                width={600}
+                                height={400}
+                                className="aspect-[3/2] object-cover transition-transform hover:scale-[1.02]"
+                            />
                         </button>
                     </li>
                 ))}

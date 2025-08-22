@@ -9,13 +9,13 @@ export default function Hero() {
     return (
         <section className="relative isolate overflow-hidden bg-charcoal text-cream">
             <Image
-                src="/images/hero.png"         // keep your asset name
+                src="/images/hero.avif"         // keep your asset name
                 alt=""
                 aria-hidden="true"
                 fill
                 priority
                 sizes="100vw"
-                className="object-cover"
+                className="object-cover opacity-40"
             />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/60" />
 
