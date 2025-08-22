@@ -55,17 +55,24 @@ body {
   --speed: 40s
 }
 
-.ticker__track{
-  display:flex;
-  gap:2rem;
-  width:max-content;
-  animation:ticker var(--speed,20s) linear infinite;
+.ticker__track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: ticker var(--speed, 20s) linear infinite;
   will-change: transform;
 }
 
-@keyframes ticker{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); } /* -50% works because you duplicated the items */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+  /* -50% works because you duplicated the items */
 }
 
 .ticker__track:hover {
@@ -81,4 +88,10 @@ body {
 :focus-visible {
   outline: 2px solid var(--burgundy);
   outline-offset: 2px
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    animation: none
+  }
 }

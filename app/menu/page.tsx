@@ -23,10 +23,13 @@ export default function Page() {
             hasMenuItem: s.items.map(i => ({
                 "@type": "MenuItem",
                 name: i.name,
-                offers: { "@type": "Offer", price: i.price }
+                description: i.description,
+                url: `${site.url}/menu#${i.id}`,
+                offers: { "@type": "Offer", priceCurrency: "USD", price: i.price }
             }))
         }))
     };
+
 
     return (
         <main>

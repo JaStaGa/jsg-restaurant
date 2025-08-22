@@ -17,7 +17,7 @@ export default function MenuList({ sections, filters }: { sections: MenuSection[
                         <h2 className="text-2xl font-serif text-burgundy">{section.title}</h2>
                         <ul className="mt-4 divide-y">
                             {section.items.filter(i => matchFlags(i, filters)).map(item => (
-                                <li key={item.id} className="py-3 flex items-start justify-between gap-6">
+                                <li id={item.id} key={item.id} className="py-3 flex items-start justify-between gap-6">
                                     <div>
                                         <div className="font-medium">{item.name}</div>
                                         {item.description && <p className="text-sm text-charcoal/70">{item.description}</p>}

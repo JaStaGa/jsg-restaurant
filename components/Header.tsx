@@ -16,7 +16,7 @@ export default function Header() {
         <header className="bg-cream/90 backdrop-blur border-b sticky top-0 z-40">
             <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
                 <Link href="/" className="font-serif text-burgundy text-lg">JSG Restaurant</Link>
-                <nav className="flex gap-5 text-sm overflow-x-auto">
+                <nav aria-label="Primary" className="flex gap-5 text-sm overflow-x-auto">
                     {links.map(l => {
                         const active = p === l.href;
                         return (
@@ -30,7 +30,6 @@ export default function Header() {
                                 {l.label}
                                 {active && <span className="absolute -bottom-3 left-0 right-0 h-0.5 bg-burgundy" />}
                             </Link>
-                            
                         );
                     })}
                 </nav>
